@@ -3,9 +3,14 @@ import React, { useEffect } from "react";
 import { makeTile, moveTile } from "../util/tile";
 
 
-export default function useMoveTile({tileList, setTileList}){
+export default function useMoveTile({tileList, setTileList, setScore}){
     function moveAndAdd({x,y}){
         const newTileList = moveTile({tileList, x, y});
+        const score = newTileList.reduce(
+            (acc, item) => (item.isMerged ? acc + item.value : acc),
+            0,
+        );
+        setScore( v => v + score);
         const newTile = makeTile(newTileList);
         newTile.isNew = true;
         newTileList.push(newTile);
