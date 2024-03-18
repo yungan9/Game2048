@@ -183,6 +183,7 @@ hr {
   width: 500px;
   margin: 0 auto;
   margin-top: 30px;
+  
 }
 
 @-webkit-keyframes fade-in {
@@ -211,6 +212,7 @@ hr {
 }
 .game-container {
   margin-top: 40px;
+  margin: 0 auto;
   position: relative;
   padding: 15px;
   cursor: default;
@@ -661,6 +663,7 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left:30px;
 }
 
 .game-intro {
@@ -775,6 +778,8 @@ body {
 
   .heading {
     margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   .game-intro {
